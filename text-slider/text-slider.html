@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Text Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  
+  <style>
+    
+    .section-marquee {
+      padding: 2rem 0;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .title {
+      font-size: 26px;
+      text-align: center;
+      padding-top: 4rem;
+      padding-bottom: 1rem;
+      margin: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      position: relative;
+    }
+
+    .swiper-wrapper {
+      -webkit-transition-timing-function: linear !important;
+      transition-timing-function: linear !important;
+      position: relative;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 76px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      position: relative;
+      overflow: hidden;
+      padding: 0 50px;
+    }
+
+    .swiper-slide:after {
+      content: "";
+      display: block;
+      width: 90%;
+      height: 15px;
+      background: white;
+      position: absolute;
+      left: 5%;
+      bottom: 0;
+      z-index: -1;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="section-marquee">
+  
+    <div class="swiper-container swiper-marquee">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide slide-1" style="color: #e79105;">1 Ipsum Ipsum</div>
+          <div class="swiper-slide slide-2" style="color: #c16452;">2 Lorem lorem</div>
+          <div class="swiper-slide slide-3" style="color: #862714;">3 Ipsum Ipsum</div>
+          <div class="swiper-slide slide-1" style="color: #e79105;">1 Ipsum Ipsum</div>
+          <div class="swiper-slide slide-2" style="color: #c16452;">2 Lorem lorem</div>
+          <div class="swiper-slide slide-3" style="color: #862714;">3 Ipsum Ipsum</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+
+    let marquee = new Swiper('.swiper-marquee', {
+      spaceBetween: 0,
+      centeredSlides: true,
+      speed: 8000,
+      autoplay: {
+        delay: 1,
+      },
+      loop: true,
+      slidesPerView:'auto',
+      allowTouchMove: false,
+      disableOnInteraction: true
+    });
+
+  </script>
+</body>
+
+</html>
