@@ -12,14 +12,14 @@
 }
 
 .content-col-text{
-  flex: 60%;
+  flex: 50%;
   align-content: flex-start;
-  padding: 30px;
+  padding: 60px 30px 30px 60px;
   color: #7f2549;
 }
 
 .content-col-image{
-  flex: 40%;
+  flex: 50%;
   align-content: flex-start;
 }
 
